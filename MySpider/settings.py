@@ -6,6 +6,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import os
 
 BOT_NAME = 'MySpider'
 
@@ -86,3 +87,11 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+STATIC_FILE = os.path.join(BASE_DIR, 'static_file/').replace('\\', '/')
+
+BAIDU_EASYDL_AK = '92P3xfHMjmjleaYhPBZ4zNc2'
+
+BAIDU_EASYDL_SK = 'HX3uyhwSUy3Bf8GOVRMGlsG4BaXeI4Sn'
