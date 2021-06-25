@@ -174,7 +174,7 @@ class Code(object):
         # # 释放资源
         # cv2.waitKey(0)  # 按任意键退出图片展示
         # cv2.destroyAllWindows()
-        time.sleep(3)
+        time.sleep(2)
 
         # 必脚两张图的重叠部分
         result = cv2.matchTemplate(slider_pic, background_pic, cv2.TM_CCOEFF_NORMED)
@@ -212,6 +212,7 @@ class Code(object):
 
 class Login(object):
     def __init__(self, user, password, retry):
+        uc.TARGET_VERSION = 91
         self.browser = uc.Chrome()
         self.wait = WebDriverWait(self.browser, 20)
         self.url = 'https://www.zhihu.com/signin'
@@ -235,7 +236,7 @@ class Login(object):
         login_element = self.browser.find_element_by_xpath(
             '//*[@id="root"]/div/main/div/div/div/div[1]/div/form/div[1]/div[2]')
         self.browser.execute_script("arguments[0].click();", login_element)
-        time.sleep(5)
+        time.sleep(2)
 
         # 输入账号
         username = self.wait.until(
@@ -253,7 +254,7 @@ class Login(object):
             Ec.element_to_be_clickable((By.CSS_SELECTOR, '.Button.SignFlow-submitButton'))
         )
         submit.click()
-        time.sleep(3)
+        time.sleep(2)
 
         k = 1
         # while True:
@@ -268,7 +269,7 @@ class Login(object):
             # 获取验证码滑动距离
             if is_easy_dl:
                 self.sli.onload_save_img(bg_img.get_attribute('src'), 'background_img.jpg')
-                image_path = '{0}{1}/{2}'.format(settings.STATIC_FILE, 'zhihu_captchat', 'background_img.jpg')
+                image_path = '{0}{1}/{2}'.format(settings.STATIC_FILE, 'zhihu_captcha', 'background_img.jpg')
                 distance = easy_dl.verification(image_path)
             else:
                 # 获取滑块链接
@@ -289,14 +290,14 @@ class Login(object):
             self.sli.slide_verification(self.browser, element, distance)
 
             # 滑动之后的url链接
-            time.sleep(5)
+            time.sleep(2)
             # 登录框
             try:
                 submit = self.wait.until(
                     Ec.element_to_be_clickable((By.CSS_SELECTOR, '.Button.SignFlow-submitButton'))
                 )
                 submit.click()
-                time.sleep(3)
+                time.sleep(2)
             except:
                 pass
 
@@ -308,7 +309,7 @@ class Login(object):
             else:
                 # reload = self.browser.find_element_by_css_selector("#reload div")
                 # self.browser.execute_script("arguments[0].click();", reload)
-                time.sleep(3)
+                time.sleep(2)
 
                 k += 1
 

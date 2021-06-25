@@ -3,7 +3,7 @@ from selenium.webdriver.support import expected_conditions as Ec
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 import requests
-import undetected_chromedriver as uc
+import undetected_chromedriver.v2 as uc
 
 from MySpider import settings
 

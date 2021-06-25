@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="965d1b9f-daea-4a96-b6e1-0d2a1adcf256" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MySpider/utils/background_img.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySpider/utils/baidu_easydl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySpider/utils/code_and_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MySpider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MySpider.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySpider/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MySpider/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MySpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySpider/spiders/zhihu.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySpider/spiders/zhihu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySpider/utils/background_img.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySpider/utils/background_img.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySpider/utils/code_and_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySpider/utils/code_and_login.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.baidu_easydl">
+  <component name="RunManager" selected="Python.main">
     <configuration name="background_img" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MySpider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,10 +142,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.baidu_easydl" />
-        <item itemvalue="Python.background_img" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.zhihu" />
+        <item itemvalue="Python.baidu_easydl" />
+        <item itemvalue="Python.background_img" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +161,7 @@
       <updated>1615092531662</updated>
       <workItem from="1615092533776" duration="7946000" />
       <workItem from="1615101214317" duration="2649000" />
-      <workItem from="1624235162492" duration="33312000" />
+      <workItem from="1624235162492" duration="45589000" />
     </task>
     <servers />
   </component>
@@ -188,16 +186,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/MySpider/spiders/zhihu.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="2" />
+          <line>38</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MySpider/spiders/zhihu.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MySpider$main.coverage" NAME="main Coverage Results" MODIFIED="1615101835964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MySpider" />
+    <SUITE FILE_PATH="coverage/MySpider$main.coverage" NAME="main Coverage Results" MODIFIED="1624520353802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MySpider" />
     <SUITE FILE_PATH="coverage/MySpider$baidu_easydl.coverage" NAME="baidu_easydl Coverage Results" MODIFIED="1624353735305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MySpider/utils" />
-    <SUITE FILE_PATH="coverage/MySpider$zhihu.coverage" NAME="zhihu Coverage Results" MODIFIED="1615096130742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MySpider/spiders" />
     <SUITE FILE_PATH="coverage/MySpider$background_img.coverage" NAME="background_img Coverage Results" MODIFIED="1624342678235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MySpider/utils" />
+    <SUITE FILE_PATH="coverage/MySpider$zhihu.coverage" NAME="zhihu Coverage Results" MODIFIED="1624520326860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MySpider/spiders" />
   </component>
 </project>
