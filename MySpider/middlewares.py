@@ -2,11 +2,17 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import json
+import random
 
+from fake_useragent import UserAgent
 from scrapy import signals
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
+
+from MySpider import settings
+from tools.crawl_xici_ip import GetAgentIp
 
 
 class MyspiderSpiderMiddleware:
@@ -101,3 +107,28 @@ class MyspiderDownloaderMiddleware:
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+class RandomUserAgentMiddleware:
+
+    # 随机更换user-agent
+    def __init__(self, crawler):
+        super().__init__()
+        self.ua_type = crawler.settings.get("RANDOM_UA_TYPE", "random")
+        self.ua = ''
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(crawler)
+
+    def process_request(self, request, spider):
+        with open("{0}/fake-useragent.json".format(settings.STATIC_FILE), 'r') as load_f:
+            load_dict = json.load(load_f)
+        data_randomize = list(load_dict['randomize'].values())
+        data_browsers = load_dict['browsers']
+        if self.ua_type == 'random':
+            browser = random.choice(data_randomize)
+        else:
+            browser = self.ua_type
+        self.ua = random.choice(data_browsers[browser])
+        request.headers.setdefault('User-Agent', self.ua)

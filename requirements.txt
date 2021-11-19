@@ -3,3 +3,5 @@ selenium>=3.141.0
 undetected-chromedriver>=3.0.1
 numpy>=1.19.5
 opencv-python>=4.5.2.54
+fake-useragent>=0.1.11
+mysqlclient>=2.0.3
